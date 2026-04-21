@@ -493,74 +493,147 @@ footer {
 }
 
 
-/* TABLET */
+
 @media (max-width: 1024px) {
 
+  /* HEADER */
+  .main-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  /* FOOTER */
   .footer-top {
-    flex-direction: column !important;
-    gap: 24px !important;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    text-align: center;
   }
 
   .footer-bottom {
-    padding-left: 0 !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 10px !important;
+    padding-left: 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
   }
 }
 
 
-/* MOBILE */
+
 @media (max-width: 768px) {
 
-  footer {
-    padding: 60px 16px 30px !important;
+  /* HEADER FIX (CLEAN STACK) */
+  .main-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
   }
 
-  .footer-top {
-    flex-direction: column !important;
-    gap: 20px !important;
+  .logo {
+    text-align: center;
   }
 
+  .nav-links {
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  /* HOT CARD */
+  .hot-recipes-card {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  /* NEWSLETTER (THIS IS THE IMPORTANT FIX) */
+  .footer-newsletter-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .newsletter-form input {
+    width: 100%;
+  }
+
+  .newsletter-form button {
+    width: 100%;
+  }
+
+  /* REMOVE BAD SPACING */
   .footer-bottom {
-    padding-left: 0 !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 8px !important;
+    padding-left: 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
   }
 
+  /* INSTAGRAM CLEAN */
   .insta-location-row {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 4px !important;
-  }
-
-  .insta-caption {
-    font-size: 0.8rem !important;
-  }
-
-  .insta-likes {
-    font-size: 0.8rem !important;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
-
-/* SMALL PHONES */
 @media (max-width: 480px) {
 
-  .insta-username {
-    font-size: 0.8rem !important;
+  /* HEADER TIGHTEN */
+  .nav-links {
+    gap: 0.5rem;
   }
 
-  .insta-city {
-    font-size: 0.7rem !important;
+  .nav-links a {
+    font-size: 0.8rem;
   }
 
-  .insta-date {
-    font-size: 0.65rem !important;
+  /* TEXT SCALE */
+  h1.recipe-title {
+    font-size: 1.5rem;
   }
 
+  .section-heading {
+    font-size: 1.4rem;
+  }
+
+  /* NEWSLETTER PERFECT STACK */
+  .newsletter-form {
+    gap: 10px;
+  }
+
+  .newsletter-form input,
+  .newsletter-form button {
+    width: 100%;
+  }
+
+  /* FOOTER CLEAN */
   .footer-bottom {
-    font-size: 0.75rem !important;
+    font-size: 0.75rem;
+    text-align: center;
   }
 }
