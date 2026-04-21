@@ -16,6 +16,7 @@ body {
   font-family: var(--primary-font);
   color: var(--black);
   line-height: 1.6;
+  background-color: red;
 }
 
 .container {
