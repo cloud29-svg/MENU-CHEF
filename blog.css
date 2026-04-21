@@ -492,8 +492,9 @@ footer {
   color: red;
 }
 
-
-
+/* =========================
+   TABLET (≤ 1024px)
+   ========================= */
 @media (max-width: 1024px) {
 
   /* HEADER */
@@ -501,26 +502,157 @@ footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 16px;
   }
 
   .nav-links {
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1.2rem;
+    gap: 16px;
   }
 
   .social-icons {
     justify-content: center;
   }
 
+  /* HERO CARD */
+  .hot-recipes-card {
+    flex-direction: column;
+    gap: 30px;
+    padding: 32px;
+  }
+
+  /* CHEF SECTION */
+  .chef-container {
+    flex-direction: column;
+  }
+
+  /* GRID FIX */
+  .recipe-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   /* FOOTER */
   .footer-top {
     flex-direction: column;
-    gap: 24px;
     align-items: center;
     text-align: center;
   }
 
+  .footer-bottom {
+    padding-left: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+/* =========================
+   MOBILE (≤ 768px)
+   ========================= */
+@media (max-width: 768px) {
+
+  /* ===== HEADER (THIS FIXES YOUR SCATTER ISSUE) ===== */
+  .main-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .logo {
+    text-align: center;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 20px;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+  }
+
+
+  /* ===== HERO ===== */
+  .hot-recipes-card {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  h1.recipe-title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .recipe-description {
+    text-align: center;
+  }
+
+  .author-button-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+
+  /* ===== NEWSLETTER (THIS FIXES YOUR BUTTON ISSUE) ===== */
+  .footer-newsletter-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .newsletter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .newsletter-form input {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .newsletter-form button {
+    width: 100%;
+    max-width: 320px;
+  }
+
+
+  /* ===== GRIDS ===== */
+  .recipes-grid,
+  .insta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recipe-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* ===== CHEF ===== */
+  .chef-content {
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+
+  .chef-content p {
+    max-width: 100%;
+  }
+
+
+  /* ===== FOOTER ===== */
   .footer-bottom {
     padding-left: 0;
     flex-direction: column;
@@ -532,80 +664,14 @@ footer {
 
 
 
-@media (max-width: 768px) {
-
-  /* HEADER FIX (CLEAN STACK) */
-  .main-header {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
-  }
-
-  .logo {
-    text-align: center;
-  }
-
-  .nav-links {
-    justify-content: center;
-    gap: 0.8rem;
-  }
-
-  .nav-links a {
-    font-size: 0.85rem;
-  }
-
-  .social-icons {
-    justify-content: center;
-  }
-
-  /* HOT CARD */
-  .hot-recipes-card {
-    flex-direction: column;
-    padding: 20px;
-    gap: 20px;
-  }
-
-  /* NEWSLETTER (THIS IS THE IMPORTANT FIX) */
-  .footer-newsletter-row {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .newsletter-form {
-    flex-direction: column;
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .newsletter-form input {
-    width: 100%;
-  }
-
-  .newsletter-form button {
-    width: 100%;
-  }
-
-  /* REMOVE BAD SPACING */
-  .footer-bottom {
-    padding-left: 0;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-  }
-
-  /* INSTAGRAM CLEAN */
-  .insta-location-row {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
+/* =========================
+   SMALL PHONES (≤ 480px)
+   ========================= */
 @media (max-width: 480px) {
 
-  /* HEADER TIGHTEN */
+  /* HEADER TIGHT */
   .nav-links {
-    gap: 0.5rem;
+    gap: 8px;
   }
 
   .nav-links a {
@@ -619,21 +685,22 @@ footer {
 
   .section-heading {
     font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .section-description {
+    text-align: center;
   }
 
   /* NEWSLETTER PERFECT STACK */
-  .newsletter-form {
-    gap: 10px;
-  }
-
   .newsletter-form input,
   .newsletter-form button {
+    max-width: 100%;
     width: 100%;
   }
 
-  /* FOOTER CLEAN */
+  /* FOOTER TEXT */
   .footer-bottom {
     font-size: 0.75rem;
-    text-align: center;
   }
-}
+    }
