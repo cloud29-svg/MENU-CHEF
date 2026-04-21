@@ -490,212 +490,125 @@ footer {
 #webflow-red {
   color: red;
 }
+/* Media Queries for Responsiveness */
 
-/* =========================
-   TABLET (≤ 1024px)
-   ========================= */
+/* Tablet and Small Desktops (max-width: 1024px) */
 @media (max-width: 1024px) {
-
-  /* HEADER */
-  .main-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 18px;
+  .content-grid {
+    grid-template-columns: 1fr; /* Stack sidebar below content */
+    gap: 40px;
   }
 
-  .nav-links {
+  .sidebar {
     display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    gap: 18px;
-    width: 100%;
+    justify-content: center;
+    gap: 40px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 40px;
   }
 
-  .nav-links a {
-    white-space: nowrap;
+  .sidebar .share-links i {
+    display: inline-block;
+    margin: 0 15px;
   }
 
-  .social-icons {
-    display: flex;
-    gap: 16px;
+  .chef-content {
+    padding: 2.5rem;
   }
+}
 
-  /* HERO CARD */
-  .hot-recipes-card {
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .nav-bar {
     flex-direction: column;
-    padding: 32px;
-    gap: 24px;
+    gap: 20px;
   }
 
-  /* CHEF SECTION */
+  nav a {
+    margin: 0 10px;
+    font-size: 14px;
+  }
+
+  .article-header h1 {
+    font-size: 32px;
+  }
+
+  .pull-quote {
+    font-size: 24px;
+    padding-left: 20px;
+    margin: 30px 0;
+  }
+
+  .newsletter {
+    padding: 60px 20px;
+  }
+
+  .deco-left, .deco-right {
+    display: none; /* Hide decorative images to clear space for text */
+  }
+
   .chef-container {
     flex-direction: column;
   }
 
-  .chef-content {
-    padding: 2rem;
+  .chef-visual {
+    order: -1; /* Image on top */
+    height: 300px;
   }
 
-  /* GRIDS */
-  .recipe-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .recipes-grid,
-  .insta-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* FOOTER */
   .footer-top {
     flex-direction: column;
     align-items: center;
+    gap: 30px;
     text-align: center;
   }
 
   .footer-bottom {
-    padding-left: 0;
     flex-direction: column;
     align-items: center;
+    padding-left: 0;
+    gap: 20px;
     text-align: center;
   }
 }
 
+/* Mobile Phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .article-header h1 {
+    font-size: 28px;
+  }
 
-
-/* =========================
-   MOBILE (≤ 768px)
-   ========================= */
-@media (max-width: 768px) {
-
-  /* ================= HEADER (YOUR DESIGN STYLE FIX) ================= */
-  .main-header {
+  .author-meta {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 14px;
-  }
-
-  .logo {
-    font-size: 1.8rem;
-  }
-
-  .nav-links {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    gap: 16px;
-    width: 100%;
-  }
-
-  .nav-links a {
-    font-size: 0.9rem;
-    white-space: nowrap;
-  }
-
-  .social-icons {
-    display: flex;
-    gap: 14px;
-  }
-
-
-  /* ================= HERO ================= */
-  .hot-recipes-card {
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  h1.recipe-title {
-    font-size: 1.8rem;
-    text-align: left;
-  }
-
-
-  /* ================= NEWSLETTER (FIXED PRO STYLE) ================= */
-  .footer-newsletter-row {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .newsletter-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 14px;
-  }
-
-  .newsletter-form input {
-    width: 100%;
-    max-width: 340px;
-    padding: 14px;
-  }
-
-  .newsletter-form button {
-    width: 100%;
-    max-width: 340px;
-    padding: 14px;
-  }
-
-
-  /* ================= GRIDS ================= */
-  .recipe-grid,
-  .recipes-grid,
-  .insta-grid {
-    grid-template-columns: 1fr;
-  }
-
-
-  /* ================= CHEF ================= */
-  .chef-content {
-    text-align: left;
-  }
-
-
-  /* ================= FOOTER ================= */
-  .footer-bottom {
-    padding-left: 0;
-    flex-direction: column;
-    align-items: center;
     gap: 10px;
   }
-}
 
-
-
-/* =========================
-   SMALL PHONES (≤ 480px)
-   ========================= */
-@media (max-width: 480px) {
-
-  /* HEADER TIGHTEN */
-  .nav-links {
-    gap: 12px;
+  .subscribe-form {
+    flex-direction: column;
+    background: transparent;
+    padding: 0;
+    gap: 10px;
   }
 
-  .nav-links a {
-    font-size: 0.8rem;
+  .subscribe-form input {
+    background: white;
+    border-radius: 12px;
+    text-align: center;
   }
 
-  /* TEXT */
-  h1.recipe-title {
-    font-size: 1.5rem;
+  .subscribe-form button {
+    width: 100%;
   }
 
   .section-heading {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 
-  /* NEWSLETTER FULL WIDTH */
-  .newsletter-form input,
-  .newsletter-form button {
-    max-width: 100%;
-    width: 100%;
+  .chef-content h2 {
+    font-size: 1.8rem;
   }
 
-  /* FOOTER */
-  .footer-bottom {
-    font-size: 0.75rem;
-    text-align: center;
+  .recipes-grid, .insta-grid {
+    grid-template-columns: 1fr;
   }
 }
