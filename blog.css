@@ -16,7 +16,6 @@ body {
   font-family: var(--primary-font);
   color: var(--black);
   line-height: 1.6;
-  background-color: red;
 }
 
 .container {
@@ -500,26 +499,32 @@ footer {
   /* HEADER */
   .main-header {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 16px;
+    align-items: flex-start;
+    gap: 18px;
   }
 
   .nav-links {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 16px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 18px;
+    width: 100%;
+  }
+
+  .nav-links a {
+    white-space: nowrap;
   }
 
   .social-icons {
-    justify-content: center;
+    display: flex;
+    gap: 16px;
   }
 
   /* HERO CARD */
   .hot-recipes-card {
     flex-direction: column;
-    gap: 30px;
     padding: 32px;
+    gap: 24px;
   }
 
   /* CHEF SECTION */
@@ -527,8 +532,17 @@ footer {
     flex-direction: column;
   }
 
-  /* GRID FIX */
+  .chef-content {
+    padding: 2rem;
+  }
+
+  /* GRIDS */
   .recipe-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .recipes-grid,
+  .insta-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -543,6 +557,7 @@ footer {
     padding-left: 0;
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 }
 
@@ -553,36 +568,37 @@ footer {
    ========================= */
 @media (max-width: 768px) {
 
-  /* ===== HEADER (THIS FIXES YOUR SCATTER ISSUE) ===== */
+  /* ================= HEADER (YOUR DESIGN STYLE FIX) ================= */
   .main-header {
     flex-direction: column;
-    align-items: center;
-    gap: 12px;
+    align-items: flex-start;
+    gap: 14px;
   }
 
   .logo {
-    text-align: center;
+    font-size: 1.8rem;
   }
 
   .nav-links {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px 20px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 16px;
+    width: 100%;
   }
 
   .nav-links a {
     font-size: 0.9rem;
+    white-space: nowrap;
   }
 
   .social-icons {
     display: flex;
-    justify-content: center;
     gap: 14px;
   }
 
 
-  /* ===== HERO ===== */
+  /* ================= HERO ================= */
   .hot-recipes-card {
     flex-direction: column;
     padding: 20px;
@@ -590,21 +606,11 @@ footer {
 
   h1.recipe-title {
     font-size: 1.8rem;
-    text-align: center;
-  }
-
-  .recipe-description {
-    text-align: center;
-  }
-
-  .author-button-row {
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
+    text-align: left;
   }
 
 
-  /* ===== NEWSLETTER (THIS FIXES YOUR BUTTON ISSUE) ===== */
+  /* ================= NEWSLETTER (FIXED PRO STYLE) ================= */
   .footer-newsletter-row {
     flex-direction: column;
     align-items: center;
@@ -615,50 +621,43 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
     width: 100%;
+    gap: 14px;
   }
 
   .newsletter-form input {
     width: 100%;
-    max-width: 320px;
+    max-width: 340px;
+    padding: 14px;
   }
 
   .newsletter-form button {
     width: 100%;
-    max-width: 320px;
+    max-width: 340px;
+    padding: 14px;
   }
 
 
-  /* ===== GRIDS ===== */
+  /* ================= GRIDS ================= */
+  .recipe-grid,
   .recipes-grid,
   .insta-grid {
     grid-template-columns: 1fr;
   }
 
-  .recipe-grid {
-    grid-template-columns: 1fr;
-  }
 
-
-  /* ===== CHEF ===== */
+  /* ================= CHEF ================= */
   .chef-content {
-    padding: 2rem 1.5rem;
-    text-align: center;
-  }
-
-  .chef-content p {
-    max-width: 100%;
+    text-align: left;
   }
 
 
-  /* ===== FOOTER ===== */
+  /* ================= FOOTER ================= */
   .footer-bottom {
     padding-left: 0;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    text-align: center;
   }
 }
 
@@ -669,38 +668,34 @@ footer {
    ========================= */
 @media (max-width: 480px) {
 
-  /* HEADER TIGHT */
+  /* HEADER TIGHTEN */
   .nav-links {
-    gap: 8px;
+    gap: 12px;
   }
 
   .nav-links a {
     font-size: 0.8rem;
   }
 
-  /* TEXT SCALE */
+  /* TEXT */
   h1.recipe-title {
     font-size: 1.5rem;
   }
 
   .section-heading {
     font-size: 1.4rem;
-    text-align: center;
   }
 
-  .section-description {
-    text-align: center;
-  }
-
-  /* NEWSLETTER PERFECT STACK */
+  /* NEWSLETTER FULL WIDTH */
   .newsletter-form input,
   .newsletter-form button {
     max-width: 100%;
     width: 100%;
   }
 
-  /* FOOTER TEXT */
+  /* FOOTER */
   .footer-bottom {
     font-size: 0.75rem;
+    text-align: center;
   }
-    }
+}
