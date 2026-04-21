@@ -1,4 +1,4 @@
-* {
+     * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -755,3 +755,138 @@ body {
     .social-icons a:hover {
       color: #e25c1e;
     }
+    
+  
+@media (max-width: 1024px) {
+
+  .hot-recipes-card {
+    flex-direction: column;
+    padding: 32px;
+    gap: 32px;
+  }
+
+  h1.recipe-title {
+    font-size: 2.3rem;
+  }
+
+  .chef-container {
+    flex-direction: column;
+  }
+
+  .chef-content,
+  .chef-visual {
+    flex: 1 1 100%;
+  }
+
+  .recipe-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-newsletter-row {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+
+@media (max-width:768px) {
+
+  .container {
+    padding: 1rem;
+  }
+
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .hot-recipes-card {
+    padding: 24px;
+  }
+
+  h1.recipe-title {
+    font-size: 1.8rem;
+  }
+
+  .author-button-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .categories-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .recipes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recipe-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .insta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chef-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .chef-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .chef-content p {
+    max-width: 100%;
+  }
+
+  .footer-middle {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+
+  h1.recipe-title {
+    font-size: 1.5rem;
+  }
+
+  .section-heading {
+    font-size: 1.5rem;
+  }
+
+  .insta-header h2,
+  .recipes-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn-primary,
+  .btn-chef {
+    width: 100%;
+    text-align: center;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form input,
+  .newsletter-form button {
+    width: 100%;
+  }
+            }
